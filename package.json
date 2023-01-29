@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
-    "runtests": "npm run tests --"
+    "runtests": "npx cypress run --e2e"
   },
   "author": "Radu Negut",
   "license": "ISC",
