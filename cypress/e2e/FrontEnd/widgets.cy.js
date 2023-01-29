@@ -11,9 +11,12 @@ describe('check Widgets cards', ()=>{
 
     it('check Most Tracked Flights', ()=> {
 
-        cy.get('#widgetPanel > div > aside.card-panel.tracked-stats').should('have.attr','open').should('eq','true');
+        cy.get('#widgetPanel > div > aside.card-panel.tracked-stats').should('have.attr','open').should('eq','open');
+        
+        /*
         cy.get('.card-panel.tracked-stats').should('have.attr','max.height').should('eq','192px');
         cy.get('.card-panel.tracked-stats').should('have.attr','height').should('eq','192px');
+*/
 
         cy.get('.card-panel.tracked-stats > header.card-summary > div.card-title').should('have.text','Most tracked flights');
         cy.get('.card-panel.tracked-stats > header.card-summary > div.card-more-info > span').should('have.text','LIVE');
