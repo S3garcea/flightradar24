@@ -28,7 +28,7 @@ describe('check privacy pop up', ()=>{
         cy.get('#onetrust-pc-sdk').should('be.visible')
     })
 
-    it('check Show purposes', ()=> {
+    it('check Show Accept', ()=> {
 
         cy.visit('https://www.flightradar24.com/');
         cy.get('#onetrust-accept-btn-handler').click();
@@ -36,4 +36,4 @@ describe('check privacy pop up', ()=>{
         cy.get('#ot-sdk-container').should('not.exist')
     })
     
-    })
+})

@@ -48,7 +48,7 @@ describe('check Map Buttons', ()=>{
 
     })
 
-    it('check Plus button', ()=> {
+    it('check Plus Button', ()=> {
 
         cy.get('#mapControlsApp > div > section.section.overlay-side-buttons.with-animation.visible > button.base-button.square.small.map-control-button.zoom-button.plus > span').should('exist').should('be.visible');
         cy.get('#mapControlsApp > div > section.section.overlay-side-buttons.with-animation.visible > button.base-button.square.small.map-control-button.zoom-button.plus > span').should('have.attr','style').should('eq','color: white;');
