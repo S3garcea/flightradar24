@@ -2,10 +2,14 @@
 
 describe('check Hamburger Menu', ()=>{
 
-    it('check Hamburger Menu', ()=> {
+    beforeEach('Access website', ()=>{
 
-        cy.visit('https://www.flightradar24.com/');
-        cy.get('#onetrust-accept-btn-handler').click();
+    cy.visit('https://www.flightradar24.com/');
+    cy.get('#onetrust-accept-btn-handler').click();
+})
+    
+
+    it('check Hamburger Menu', ()=> {
 
         cy.get('.navbar-toggle').should('have.attr','type').should('eq','button');
         cy.get('.navbar-toggle').should('have.attr','data-toggle').should('eq','collapse');
@@ -172,4 +176,11 @@ describe('check Hamburger Menu', ()=>{
 
     })
     
+    it('check Apps', ()=> {
+
+        cy.get('.navbar-toggle').click();
+        cy.get('#navTopApps').click();
+
+        cy.url().should('eq','https://www.flightradar24.com/apps')
+    })
 })
